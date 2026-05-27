@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0otvbs40qsnb"
-path="res://.godot/imported/props.png-0148f0d218a40e9dffac261e2b935c09.ctex"
+path="res://.godot/imported/props.png-c6938b4951a82e447fac8a4f975049f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot_FirstProject/assets/2D Resources/tilesets/props.png"
-dest_files=["res://.godot/imported/props.png-0148f0d218a40e9dffac261e2b935c09.ctex"]
+source_file="res://assets/2D Resources/tilesets/props.png"
+dest_files=["res://.godot/imported/props.png-c6938b4951a82e447fac8a4f975049f0.ctex"]
 
 [params]
 

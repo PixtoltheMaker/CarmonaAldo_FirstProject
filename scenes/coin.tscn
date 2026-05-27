@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://16qc30xjts01"]
 
-[ext_resource type="Texture2D" uid="uid://b5vqmsbdoe26l" path="res://Godot_FirstProject/assets/2D Resources/items/coin.png" id="1_7jbqk"]
-[ext_resource type="Script" uid="uid://cfhidfcm3alqk" path="res://Godot_FirstProject/Scripts/coin.gd" id="1_odhug"]
+[ext_resource type="Texture2D" uid="uid://b5vqmsbdoe26l" path="res://assets/2D Resources/items/coin.png" id="1_7jbqk"]
+[ext_resource type="Script" uid="uid://cfhidfcm3alqk" path="res://Scripts/coin.gd" id="1_odhug"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_odhug"]
 radius = 8.0

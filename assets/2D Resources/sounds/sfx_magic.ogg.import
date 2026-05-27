@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bbfo7apf4cwlg"
-path="res://.godot/imported/sfx_magic.ogg-131bfa2eb414beba4d11a15478fce030.oggvorbisstr"
+path="res://.godot/imported/sfx_magic.ogg-c2a4f330c37c0b05589ac8b42069ea8d.oggvorbisstr"
 
 [deps]
 
-source_file="res://Godot_FirstProject/assets/2D Resources/sounds/sfx_magic.ogg"
-dest_files=["res://.godot/imported/sfx_magic.ogg-131bfa2eb414beba4d11a15478fce030.oggvorbisstr"]
+source_file="res://assets/2D Resources/sounds/sfx_magic.ogg"
+dest_files=["res://.godot/imported/sfx_magic.ogg-c2a4f330c37c0b05589ac8b42069ea8d.oggvorbisstr"]
 
 [params]
 

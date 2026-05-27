@@ -3,6 +3,9 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player": 
-		queue_free()
+	var player:PlayerBody2D
+	player = body as PlayerBody2D
+	player.coins += 1
+	print(player.coins)
+	queue_free()
 	

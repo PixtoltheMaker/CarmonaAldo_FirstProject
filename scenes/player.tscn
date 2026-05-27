@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5snc4fom16e0"]
 
-[ext_resource type="Script" uid="uid://nutyb1wk0oe7" path="res://Godot_FirstProject/Scripts/player.gd" id="1_o45rm"]
-[ext_resource type="Texture2D" uid="uid://cdm7s5ktl2acx" path="res://Godot_FirstProject/assets/2D Resources/characters/DinoSprites - doux.png" id="1_oujc4"]
+[ext_resource type="Script" uid="uid://nutyb1wk0oe7" path="res://Scripts/player.gd" id="1_o45rm"]
+[ext_resource type="Texture2D" uid="uid://cdm7s5ktl2acx" path="res://assets/2D Resources/characters/DinoSprites - doux.png" id="1_oujc4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o45rm"]
 atlas = ExtResource("1_oujc4")
