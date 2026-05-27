@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2lx3q83y2f2q"
+path="res://.godot/imported/sfx_bump.ogg-6b247b6c3ffcfb6d891689bcbbaf25ba.oggvorbisstr"
+
+[deps]
+
+source_file="res://Godot_FirstProject/assets/2D Resources/sounds/sfx_bump.ogg"
+dest_files=["res://.godot/imported/sfx_bump.ogg-6b247b6c3ffcfb6d891689bcbbaf25ba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

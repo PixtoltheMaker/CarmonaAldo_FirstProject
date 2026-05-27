@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://1dis0ll2kv1o"]
+
+[ext_resource type="Texture2D" uid="uid://bsi6icc64n26m" path="res://icon.svg" id="2_wnmds"]
+[ext_resource type="FontFile" uid="uid://cm5qy266irq58" path="res://Godot_FirstProject/assets/2D Resources/fonts/PixelOperator8.ttf" id="3_wnmds"]
+[ext_resource type="PackedScene" uid="uid://5snc4fom16e0" path="res://Godot_FirstProject/scenes/player.tscn" id="4_xkkhf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k1gkp"]
+font = ExtResource("3_wnmds")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jp3pv"]
+size = Vector2(385, 36)
+
+[node name="DemoMap" type="Node2D" unique_id=1311524712]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=692080577]
+position = Vector2(66, 171)
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="." unique_id=1657303464]
+offset_left = -54.0
+offset_top = 132.0
+offset_right = 178.0
+offset_bottom = 181.0
+text = "My Name :) 
+(Pixtol the Maker)"
+label_settings = SubResource("LabelSettings_k1gkp")
+horizontal_alignment = 1
+
+[node name="Player" parent="." unique_id=1738014220 instance=ExtResource("4_xkkhf")]
+position = Vector2(66, 215)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1641107354]
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=223105777]
+position = Vector2(66, 260.5)
+scale = Vector2(3, 0.2890625)
+texture = ExtResource("2_wnmds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1087694347]
+position = Vector2(66.5, 260)
+shape = SubResource("RectangleShape2D_jp3pv")

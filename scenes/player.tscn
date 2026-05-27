@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://5snc4fom16e0"]
+
+[ext_resource type="Script" uid="uid://nutyb1wk0oe7" path="res://Godot_FirstProject/Scripts/player.gd" id="1_o45rm"]
+[ext_resource type="Texture2D" uid="uid://cdm7s5ktl2acx" path="res://Godot_FirstProject/assets/2D Resources/characters/DinoSprites - doux.png" id="1_oujc4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o45rm"]
+atlas = ExtResource("1_oujc4")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eroaf"]
+atlas = ExtResource("1_oujc4")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4els"]
+atlas = ExtResource("1_oujc4")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g3y8"]
+atlas = ExtResource("1_oujc4")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpygb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o45rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eroaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4els")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g3y8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7h3u8"]
+radius = 4.0
+height = 16.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1738014220]
+script = ExtResource("1_o45rm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1079036181]
+sprite_frames = SubResource("SpriteFrames_vpygb")
+autoplay = "default"
+frame_progress = 0.4360136
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1198634152]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_7h3u8")
