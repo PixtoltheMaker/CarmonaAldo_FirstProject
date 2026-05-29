@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cwpcdbghsq7u"]
+
+[ext_resource type="Texture2D" uid="uid://rtrhlqeog2bs" path="res://assets/2D Resources/enemies/Green Slime Spritesheet.png" id="1_bln8p"]
+[ext_resource type="Script" uid="uid://3s7sjgnjlqou" path="res://Scripts/green_slime.gd" id="1_tuic5"]
+[ext_resource type="PackedScene" uid="uid://lf7pptykiuio" path="res://scenes/killbox.tscn" id="3_0pvn7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuic5"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(48, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pvn7"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(64, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q1e0"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(80, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boo2g"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(96, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq38r"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(112, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io87k"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(128, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q1p6"]
+atlas = ExtResource("1_bln8p")
+region = Rect2(144, 18, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vl2pm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuic5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pvn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q1e0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boo2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq38r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io87k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q1p6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pvn7"]
+size = Vector2(9, 8.34375)
+
+[node name="Green Slime" type="Node2D" unique_id=175407642]
+script = ExtResource("1_tuic5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1363724145]
+sprite_frames = SubResource("SpriteFrames_vl2pm")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.41453388
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1287712895]
+target_position = Vector2(-11, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=56798961]
+target_position = Vector2(10, 0)
+
+[node name="Killbox" parent="." unique_id=981877566 instance=ExtResource("3_0pvn7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=271969187]
+position = Vector2(0, 0.171875)
+shape = SubResource("RectangleShape2D_0pvn7")
