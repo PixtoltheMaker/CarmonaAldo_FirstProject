@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dctgnh73x8opd"]
+
+[ext_resource type="Script" uid="uid://csv3byvgppbk" path="res://Scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://c18k46kot1gxq" path="res://assets/2D Resources/tilesets/back.png" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://bdp2mcd50qjqy" path="res://assets/2D Resources/fonts/PixelOperator8-Bold.ttf" id="2_bqqt6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
+font = ExtResource("2_bqqt6")
+font_size = 60
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Main Menu" type="Control" unique_id=1420557072]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1211051354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ekxnf")
+
+[node name="Menu Container" type="VBoxContainer" parent="." unique_id=1938070577]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -174.0
+offset_top = 234.0
+offset_right = 180.0
+offset_bottom = -232.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Menu Container" unique_id=768418387]
+layout_mode = 2
+text = "Game"
+label_settings = SubResource("LabelSettings_wu84c")
+horizontal_alignment = 1
+
+[node name="Play Button" type="Button" parent="Menu Container" unique_id=175184782]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 30
+text = "Play"
+
+[node name="Options Button" type="Button" parent="Menu Container" unique_id=1420243257]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="Quit Button" type="Button" parent="Menu Container" unique_id=2046668898]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[connection signal="pressed" from="Menu Container/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Menu Container/Quit Button" to="." method="_on_quit_button_pressed"]
