@@ -8,6 +8,7 @@ extends Node2D
 var facing_left : bool = true
 
 func _physics_process(delta: float) -> void:
+	
 	if ray_cast_left.is_colliding():
 		facing_left = false
 		enemy_sprite.flip_h = true
