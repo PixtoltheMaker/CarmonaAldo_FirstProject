@@ -47,7 +47,7 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="Menu Container" unique_id=768418387]
 layout_mode = 2
-text = "Game"
+text = "UNRELATED"
 label_settings = SubResource("LabelSettings_wu84c")
 horizontal_alignment = 1
 

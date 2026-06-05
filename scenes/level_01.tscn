@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cwpcdbghsq7u" path="res://scenes/green_slime.tscn" id="8_1b6n0"]
 [ext_resource type="Script" uid="uid://cybfpbq3wqkb3" path="res://Scripts/game_master.gd" id="9_llcge"]
 [ext_resource type="PackedScene" uid="uid://lf7pptykiuio" path="res://scenes/killbox.tscn" id="9_lwi15"]
+[ext_resource type="FontFile" uid="uid://cm5qy266irq58" path="res://assets/2D Resources/fonts/PixelOperator8.ttf" id="10_e6mo4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fk2ad"]
 texture = ExtResource("2_bs324")
@@ -430,6 +431,12 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6mo4"]
 size = Vector2(2224, 20)
 
+[sub_resource type="LabelSettings" id="LabelSettings_px6rj"]
+font = ExtResource("10_e6mo4")
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Level 01" type="Node2D" unique_id=921676824]
 
 [node name="Player" parent="." unique_id=1738014220 instance=ExtResource("1_c65iy")]
@@ -582,5 +589,24 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1536467008]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 254.0
+offset_bottom = 65.0
+
+[node name="Coin Label" type="Label" parent="CanvasLayer/Control/HBoxContainer" unique_id=1212017414]
+layout_mode = 2
+text = "Coins:"
+label_settings = SubResource("LabelSettings_px6rj")
+
+[node name="Coin Count" type="Label" parent="CanvasLayer/Control/HBoxContainer" unique_id=1117763949]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_px6rj")
+
 [node name="Game Master" type="Node" parent="." unique_id=684856108]
+unique_name_in_owner = true
 script = ExtResource("9_llcge")

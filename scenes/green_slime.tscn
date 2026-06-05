@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rtrhlqeog2bs" path="res://assets/2D Resources/enemies/Green Slime Spritesheet.png" id="1_bln8p"]
 [ext_resource type="Script" uid="uid://3s7sjgnjlqou" path="res://Scripts/green_slime.gd" id="1_tuic5"]
 [ext_resource type="PackedScene" uid="uid://lf7pptykiuio" path="res://scenes/killbox.tscn" id="3_0pvn7"]
+[ext_resource type="PackedScene" uid="uid://cknmhoe1v167a" path="res://scenes/stompbox.tscn" id="4_4q1e0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuic5"]
 atlas = ExtResource("1_bln8p")
@@ -62,7 +63,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0pvn7"]
-size = Vector2(9, 8.34375)
+size = Vector2(10, 7.34375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boo2g"]
+size = Vector2(7, 6)
 
 [node name="Green Slime" type="Node2D" unique_id=175407642]
 script = ExtResource("1_tuic5")
@@ -82,5 +86,11 @@ target_position = Vector2(10, 0)
 [node name="Killbox" parent="." unique_id=981877566 instance=ExtResource("3_0pvn7")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=271969187]
-position = Vector2(0, 0.171875)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_0pvn7")
+
+[node name="Stompbox" parent="." unique_id=2124304812 instance=ExtResource("4_4q1e0")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stompbox" unique_id=1440174869]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_boo2g")

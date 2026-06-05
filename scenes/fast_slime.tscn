@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://dldksn2wstjon"]
+
+[ext_resource type="Script" uid="uid://duecfqppvoppr" path="res://Scripts/fast_slime.gd" id="1_ssnsa"]
+[ext_resource type="Texture2D" uid="uid://c8wx6ks63jrb0" path="res://assets/2D Resources/enemies/Red Slime Spritesheet.png" id="2_2myfg"]
+[ext_resource type="PackedScene" uid="uid://lf7pptykiuio" path="res://scenes/killbox.tscn" id="3_21q4e"]
+[ext_resource type="PackedScene" uid="uid://cknmhoe1v167a" path="res://scenes/stompbox.tscn" id="4_2myfg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cktea"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(48, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bpw2"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(64, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ora"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(80, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plnwr"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(96, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrsn1"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(112, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dnpl"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(128, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5edy1"]
+atlas = ExtResource("2_2myfg")
+region = Rect2(144, 18, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjlt4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cktea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bpw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ora")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plnwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrsn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dnpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5edy1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pvn7"]
+size = Vector2(10, 6.84375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21q4e"]
+size = Vector2(7, 6)
+
+[node name="Fast Slime" type="Node2D" unique_id=175407642]
+script = ExtResource("1_ssnsa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915641795]
+sprite_frames = SubResource("SpriteFrames_xjlt4")
+animation = &"Idle"
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1287712895]
+target_position = Vector2(-11, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=56798961]
+target_position = Vector2(10, 0)
+
+[node name="Killbox" parent="." unique_id=981877566 instance=ExtResource("3_21q4e")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=271969187]
+position = Vector2(0, 0.421875)
+shape = SubResource("RectangleShape2D_0pvn7")
+
+[node name="Stompbox" parent="." unique_id=2124304812 instance=ExtResource("4_2myfg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stompbox" unique_id=44594928]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_21q4e")
